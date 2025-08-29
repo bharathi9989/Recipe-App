@@ -1,6 +1,6 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";  
+import { Link } from "react-router-dom";
 import RecipeModal from "../components/RecipeModel";
 
 function Home() {
@@ -20,8 +20,7 @@ function Home() {
     const matchesSearch = recipe.strMeal
       .toLowerCase()
       .includes(search.toLowerCase());
-    const matchesCategory =
-      !Filter || recipe.strCategory === Filter;
+    const matchesCategory = !Filter || recipe.strCategory === Filter;
     return matchesSearch && matchesCategory;
   });
 
